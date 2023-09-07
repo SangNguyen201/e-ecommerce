@@ -1,0 +1,19 @@
+.s-category {
+    margin: 4rem 0;
+    .s_item {
+        position: relative;
+        margin-bottom: 20px;
+        cursor: pointer;
+        .s_overflay {
+            @include overflayCategory();
+            @include display($justify: center, $align: center);
+            h3 {
+                color: $color-white;
+            }
+        }
+        &:hover .s_overflay {
+            overflow: visible;
+            opacity: 0;
+        }
+    }
+}

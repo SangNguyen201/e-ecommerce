@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#logout {
+  margin-right: 10px;
+  color: red;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+body {
+  background-color: #f4f7fe;
+}
+
+.c-dashboard h3 {
+  color: #2b3674;
+  font-weight: 700;
+}
+.c-dashboard .c_left {
+  padding: 30px 20px;
+  background-color: #fff;
+  height: 97vh;
+}
+.c-dashboard .c_left ul li {
+  margin-bottom: 25px;
+  cursor: pointer;
+  position: relative;
+}
+.c-dashboard .c_left ul i {
+  margin-right: 10px;
+  color: #2b3674;
+}
+.c-dashboard .c_left ul .c_childMenu {
+  padding-left: 22px;
+  overflow: hidden;
+  transition: 0.5s;
+  height: 0;
+}
+.c-dashboard .c_left ul .c_childMenu.active {
+  height: 200px;
+}
+.c-dashboard .c_left ul span {
+  margin-left: 20px;
+  transition: 0.5s;
+  display: inline-block;
+}
+.c-dashboard .c_left ul span.active {
+  transform: rotate(-180deg);
+}
+.c-dashboard .c_user {
+  background-color: #fff;
+  padding: 0 5px 0 10px;
+  height: 3.5rem;
+  color: #9bb9ff;
+  border-radius: 50px;
+}
+.c-dashboard .c_user img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.c-dashboard .c_right {
+  padding: 30px;
+}
+.c-dashboard .c_right form {
+  width: 100%;
+  margin: 0 auto;
+}
+.c-dashboard .c_right form .s_item {
+  padding-left: 0 !important;
+  position: relative;
+}
+.c-dashboard .c_right form .s_item .showImg {
+  position: absolute;
+  top: 48px;
+  right: 18px;
+  width: 33px;
+  height: 35px;
+  object-fit: cover;
+}
+.c-dashboard .c_right form .s_item .showImg-2 {
+  position: absolute;
+  top: 48px;
+  right: 18px;
+  width: 33px;
+  height: 35px;
+  object-fit: cover;
+}
+.c-dashboard .c_right form select {
+  width: 100%;
+}
+.c-dashboard .c_right label,
+.c-dashboard .c_right input {
+  width: 100%;
+  display: block;
+  padding: 10px 5px;
+}
+.c-dashboard select {
+  padding: 12px 5px;
+}
+.c-dashboard table img {
+  width: 50px;
+}
+
+table tbody img {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.c-dashboard .c_right form input[type=file] {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 8px 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.c-dashboard .c_right form button {
+  margin-top: 30px;
+}
+.c-dashboard .c_right table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 100%;
+}
+.c-dashboard .c_right th,
+.c-dashboard .c_right td {
+  border: 1px solid #2b3674;
+  padding: 8px;
+  text-align: left;
+  text-align: center;
+}
+
+.c-button-1 {
+  margin-top: 30px;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #ffffff;
+  border: none;
+  transition: 0.5s;
+  border: 1px solid #000;
+  font-weight: 700;
+}
+.c-button-1:hover {
+  background-color: #000;
+  color: white;
+}
+@media (max-width: 576px) {
+  .c-button-1 {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+.c-button-2 {
+  width: 15rem;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: 0.5s;
+  background-color: #2b3674;
+  color: #fff;
+}
+.c-button-2:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.c-button-update {
+  font-size: 0.75rem;
+  padding: 7px 15px;
+  transition: 0.5s;
+}
+.c-button-update:hover {
+  background-color: rgb(211, 211, 0);
+  color: #fff;
+}
+
+.c-button-delete {
+  font-size: 0.75rem;
+  padding: 7px 15px;
+  transition: 0.5s;
+}
+.c-button-delete:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.s-login {
+  padding: 200px 0;
+}
+@media (max-width: 992px) {
+  .s-login {
+    padding: 100px 0;
+  }
+}
+.s-login .s_wrapper h3 {
+  text-align: center;
+}
+.s-login .s_wrapper .s_inner {
+  width: 100%;
+  margin: 0 auto;
+}
+.s-login .s_wrapper .s_inner form {
+  width: 40%;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .s-login .s_wrapper .s_inner form {
+    width: 80%;
+  }
+}
+.s-login .s_wrapper .s_inner form .form_group {
+  margin-bottom: 20px;
+}
+.s-login .s_wrapper .s_inner form .form_group label {
+  margin-bottom: 10px;
+}
+.s-login .s_wrapper .s_inner form .form_group input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: 1px solid #d5d5d5;
+}
+.s-login .s_wrapper .s_inner form button {
+  width: 100%;
+}

@@ -1,0 +1,20 @@
+.s-product {
+    width: 100%;
+    margin-top: 20px;
+    .s_title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .s_collection li {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: $fs-14;
+        cursor: pointer;
+        &:hover {
+            font-weight: 600;
+        }
+        &.active {
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.s-login {
+    padding: 200px 0;
+    @media (max-width: 992px) {
+        padding: 100px 0;
+    }
+    .s_wrapper {
+        h3 {
+            text-align: center;
+        }
+        .s_inner {
+            width: 100%;
+            margin: 0 auto;
+            form {
+                width: 40%;
+                margin: 0 auto;
+                @media (max-width: 992px) {
+                    width: 80%;
+                }
+                .form_group {
+                    margin-bottom: 20px;
+                    label {
+                        margin-bottom: 10px;
+                    }
+                    input {
+                        display: block;
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ddd;
+                        outline: 1px solid #d5d5d5;
+                    }
+                }
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

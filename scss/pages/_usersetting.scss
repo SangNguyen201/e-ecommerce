@@ -1,0 +1,79 @@
+.s-userSetting {
+    padding: 150px 0 100px 0;
+    @media (max-width: 992px) {
+        font-size: 13px;
+        padding: 100px 0 50px 0;
+    }
+    @media (max-width: 576px) {
+        font-size: 12px;
+    }
+    .s_dashboard {
+        button {
+            margin-top: 0;
+            margin-bottom: 30px;
+            width: 100%;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            transition: 0.5s;
+            &.active {
+                background-color: #000;
+                color: #fff;
+            }
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+            @media (max-width: 992px) {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+            @media (max-width: 576px) {
+                font-size: 12px;
+            }
+        }
+    }
+    .s_content {
+        .s_item {
+            display: none;
+            .name {
+                font-weight: $fw-700;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            .s_time {
+                margin-bottom: 26px;
+            }
+            label {
+                display: block;
+                font-weight: bold;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #ccc;
+            }
+
+            th,
+            td {
+                border: 1px solid #ccc;
+                padding: 8px;
+                text-align: left;
+            }
+            &.active {
+                display: block;
+            }
+        }
+        button {
+            width: 100%;
+        }
+    }
+}

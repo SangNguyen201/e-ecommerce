@@ -1,0 +1,88 @@
+.s-cart {
+    padding: 150px 0 100px 0;
+    .s_innerCart {
+        .s_cartItem {
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #ddd;
+                .imgs {
+                    width: 100px;
+                    height: 80px;
+                }
+                .quantity {
+                    border-bottom: none;
+                    gap: 10px;
+                    .s_number {
+                        position: relative;
+                        @media (max-width: 992px) {
+                            width: 65%;
+                        }
+                        @media (max-width: 576px) {
+                            width: 85%;
+                        }
+                        input {
+                            padding: 8px;
+                            width: 90px;
+                            font-weight: $fw-700;
+                        }
+                        .s_increase {
+                            position: absolute;
+                            top: 0;
+                            right: 5px;
+                            cursor: pointer;
+                        }
+                        .s_reduce {
+                            position: absolute;
+                            bottom: 0;
+                            right: 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            th,
+            td {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+                cursor: pointer;
+            }
+        }
+        .s_cartTotal {
+            @media (max-width: 992px) {
+                margin-top: 30px;
+            }
+            .s_content {
+                .s_subtotalPrice {
+                    @include display($justify: between, $align: center);
+                    border-top: 1px solid #ddd;
+                    border-bottom: 1px solid #ddd;
+                    padding: 10px 0;
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+                .s_shipping {
+                    padding: 10px 0;
+                    .s_discount {
+                        @include display($justify: between, $align: center);
+                    }
+                    .s_totalPrice {
+                        @include display($justify: between, $align: center);
+                        border-top: 1px solid #ddd;
+                        border-bottom: 1px solid #ddd;
+                        padding: 10px 0;
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            button {
+                @include button();
+                width: 100%;
+            }
+        }
+    }
+}

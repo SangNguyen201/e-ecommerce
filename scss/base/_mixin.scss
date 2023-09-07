@@ -1,0 +1,76 @@
+@mixin display($justify: none, $align: none) {
+    display: flex;
+    @if ($justify == "center") {
+        justify-content: center;
+    }
+    @if ($justify == "between") {
+        justify-content: space-between;
+    }
+    @if ($align == "center") {
+        align-items: center;
+    }
+}
+@mixin posAbsolute($direction, $y, $x) {
+    position: absolute;
+
+    @if ($direction == "tl") {
+        top: $y;
+        left: $x;
+    }
+    @if ($direction == "tr") {
+        top: $y;
+        right: $x;
+    }
+    @if ($direction == "br") {
+        bottom: $y;
+        right: $x;
+    }
+    @if ($direction == "centerX") {
+        top: $y;
+        left: $x;
+        transform: translateX(-50%);
+    }
+    @if ($direction == "centerBotX") {
+        bottom: $y;
+        left: $x;
+        transform: translateX(-50%);
+    }
+    @if ($direction == "centerY-40") {
+        top: $y;
+        left: $x;
+        transform: translateY(-40%);
+    }
+    @if ($direction == "centerY-50") {
+        top: $y;
+        left: $x;
+        transform: translateY(-50%);
+    }
+    @if ($direction == "center") {
+        top: $y;
+        left: $x;
+        transform: translate(-50%, -50%);
+    }
+}
+@mixin button() {
+    margin-top: 30px;
+    padding: 15px 30px;
+    color: $color-white;
+    background-color: $color-black;
+    border: none;
+    font-weight: $fw-700;
+}
+@mixin overflayCategory() {
+    position: absolute;
+    overflow: hidden;
+    opacity: 1;
+    background-color: #0000007a;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: 0.5s;
+}
+@mixin styleLiList() {
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+}

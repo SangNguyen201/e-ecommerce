@@ -1,0 +1,129 @@
+header {
+    width: 100%;
+    position: fixed;
+    transition: 0.5s;
+    z-index: 100;
+    .c-header {
+        @media (max-width: 576px) {
+            margin: 0 20px;
+        }
+    }
+    &.active {
+        background-color: $color-white;
+        box-shadow: 0px 7px 11px -2px rgba(0, 0, 0, 0.58);
+        -webkit-box-shadow: 0px 7px 11px -2px rgba(0, 0, 0, 0.58);
+        -moz-box-shadow: 0px 7px 11px -2px rgba(0, 0, 0, 0.58);
+    }
+    .c_nav {
+        width: 100%;
+        height: 80px;
+        padding-top: 30px;
+        @include display($justify: between, $align: none);
+        .c_listMenu {
+            @include display($justify: center, $align: none);
+            .c_logo {
+                margin-right: 50px;
+                img {
+                    width: $fs-66;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+            }
+            .c_menu {
+                position: relative;
+                ul {
+                    display: block;
+                    li {
+                        display: inline-block;
+                        cursor: pointer;
+                        a {
+                            margin-right: 20px;
+                        }
+                        &:hover a {
+                            font-weight: $fw-500;
+                        }
+                    }
+                    &.active {
+                        display: none;
+                    }
+                    @media (max-width: 992px) {
+                        display: none;
+                    }
+                }
+                .c_hiddenSearch {
+                    visibility: hidden;
+                    opacity: 0;
+                    input {
+                        border: none;
+                        margin-left: 10px;
+                        outline: none;
+                        font-size: $fs-16;
+                        background-color: transparent;
+                    }
+                    &.active {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .c_listIcon {
+            position: relative;
+            li {
+                display: inline-block;
+                margin-left: 20px;
+                cursor: pointer;
+                transition: 0.5s;
+                i {
+                    transition: 0.5s;
+                    font-size: $fs-18;
+                    &:hover {
+                        font-weight: $fw-500;
+                    }
+                }
+            }
+            .c_cart {
+                position: relative;
+                span {
+                    position: absolute;
+                    color: $color-white;
+                    font-size: $fs-12;
+                    top: -5px;
+                    right: -10px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background-color: black;
+                    @include display($justify: center, $align: center);
+                }
+            }
+        }
+    }
+    .c_hiddenNav {
+        @include posAbsolute("tr", 80px, 0);
+        transition: 0.5s;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        background-color: $color-white;
+        box-shadow: 0px 7px 11px -2px rgba(0, 0, 0, 0.58);
+        -webkit-box-shadow: 0px 7px 11px -2px rgba(0, 0, 0, 0.58);
+        -moz-box-shadow: 0px 7px 11px -2px rgba(0, 0, 0, 0.58);
+        ul {
+            margin: 0 auto;
+            text-align: left;
+        }
+        li {
+            display: block;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 5px;
+            transition: 0.5s;
+            &:hover {
+                font-weight: $fw-700;
+            }
+        }
+        &.active {
+            height: 260px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "base/mixin";
+@import "base/variable";
+@import "base/base";
+//------component-------
+@import "./component/nav";
+@import "./component/cardProduct";
+@import "./component/footer";
+@import "./component/button";
+// --------style page---------
+@import "pages/home";
+@import "pages/aboutUs";
+@import "pages/listProduct";
+@import "pages/detailProduct";
+@import "pages/cart";
+@import "pages/checkout";
+@import "pages/complete";
+@import "pages/contact";
+@import "pages/login";
+@import "pages/usersetting";
+@import "pages/register";
+//---------admin--------

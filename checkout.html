@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CheckOut</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- font-awesome-pro  -->
+        <link rel="stylesheet" href="./font-icon/all.min.css" />
+        <!-- my css  -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <!-- place header start -->
+            <div class="c-header container"></div>
+            <!-- place header end -->
+        </header>
+        <section class="s-checkout container">
+            <div class="row s_inner">
+                <div class="col-lg-8 s_billDetail">
+                    <p class="s_theme">Billing Details</p>
+                    <form>
+                        <div class="form-group">
+                            <label>Fullname</label>
+                            <input type="text" name="Fullname" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" name="Email" />
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" name="Phone" />
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="address" name="Address" />
+                        </div>
+                        <div class="form-group">
+                            <label>Order notes</label>
+                            <textarea name="textarea" cols="10" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="c-button-1 btn-checkout">PLACE ORDER</button>
+                    </form>
+                </div>
+                <div class="col-lg-4 s_yourOrder">
+                    <p class="s_theme">Your order</p>
+                    <div class="s_content">
+                        <div class="firt">
+                            <span>PRODUCT</span>
+                            <span>SUBTOTAL</span>
+                        </div>
+                    </div>
+                    <div class="s_shipping total">
+                        <span>Total</span>
+                        <div class="price"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+        <script src="js/base.js"></script>
+        <script src="js/checkout.js"></script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SETTING USERS</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- font-awesome-pro  -->
+        <link rel="stylesheet" href="../font-icon/all.min.css" />
+        <!-- my css  -->
+        <link rel="stylesheet" href="../css/admin.css" />
+    </head>
+    <body>
+        <main class="c-dashboard container-fluid">
+            <div class="c_wrapper">
+                <div class="row p-2">
+                    <div class="c_left col-lg-2 col-md-2" id="dashboard"></div>
+                    <div class="c_right col-lg-10 col-md-10">
+                        <div class="c_title d-flex justify-content-between">
+                            <h3 class="pb-5">Setting Users</h3>
+                            <div class="c_user d-flex align-items-center">
+                                <span id="logout">
+                                    <i class="fa-light fa-arrow-right-from-bracket"></i>
+                                </span>
+                                <span id="inforadmin"></span>
+                                <img src="../img/people/team-1.jpg" alt="" />
+                            </div>
+                        </div>
+                        <form class="row">
+                            <div class="col-lg-4 s_item">
+                                <label>Email :</label>
+                                <input type="email" name="email" />
+                            </div>
+                            <div class="col-lg-4 s_item">
+                                <label>New Password :</label>
+                                <input type="password" name="password" />
+                            </div>
+                            <div class="col-lg-4 s_item">
+                                <label>Full Name :</label>
+                                <input type="text" name="fullname" />
+                            </div>
+                            <div class="col-lg-4 s_item">
+                                <label>Phone :</label>
+                                <input type="text" name="phone" />
+                            </div>
+                            <div class="col-lg-4 s_item">
+                                <label>Avatar :</label>
+                                <input type="file" name="avatar" />
+                                <img class="showImg" src="../img/people/team-4.jpg" alt="" />
+                            </div>
+                            <div class="col-lg-4 s_item">
+                                <label>Authorized :</label>
+                                <select class="w-100" id="listAuthor">
+                                    <option value="user">User</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12 s_item">
+                                <label for="input2">Status :</label>
+                                <select class="w-100" id="listStatus">
+                                    <option value="on">ON</option>
+                                    <option value="off">OFF</option>
+                                </select>
+                            </div>
+                            <button id="btn-add" class="c-button-2">Save</button>
+                            <button id="btn-update" style="display: none" class="c-button-2">Update</button>
+                        </form>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>FULL NAME</th>
+                                    <th>EMAIL</th>
+                                    <th>AUTHORIZED</th>
+                                    <th>VIEW</th>
+                                    <th>DELETE</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="../js/admin/base.js"></script>
+        <script src="../js/admin/settingUser.js"></script>
+    </body>
+</html>

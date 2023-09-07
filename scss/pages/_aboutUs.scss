@@ -1,0 +1,105 @@
+.s-bannerStory {
+    background-color: #f4f4f4;
+    padding: 100px 0;
+    @media (max-width: 992px) {
+        padding: 100px 0 50px 0;
+    }
+    @media (max-width: 576px) {
+        padding: 100px 0 300px 0;
+    }
+    .s_wrapper {
+        position: relative;
+        .s_listBanner {
+            .s_content {
+                h3 {
+                    font-size: $fs-24;
+                    font-weight: $fw-700;
+                }
+                p {
+                    margin-top: 20px;
+                }
+            }
+            .s_thumb {
+                position: relative;
+                .s_item {
+                    position: absolute;
+                    opacity: 0;
+                    transition: 1s;
+                    &.active {
+                        opacity: 1;
+                    }
+                    img {
+                        @media (max-width: 992px) {
+                            height: 250px;
+                        }
+                    }
+                }
+            }
+        }
+        .s_dotSlide {
+            @include posAbsolute("tr", 35%, 20px);
+            li {
+                cursor: pointer;
+                color: #ddd;
+                font-size: 1.5rem;
+                &.active {
+                    color: #000;
+                }
+            }
+            @media (max-width: 992px) {
+                @include posAbsolute("tr", 25%, 20px);
+            }
+            @media (max-width: 576px) {
+                @include posAbsolute("tr", 133%, 20px);
+            }
+        }
+    }
+}
+.s-ourTeam {
+    margin-top: 30px;
+    .s_title {
+        text-align: center;
+        font-weight: $fw-600;
+        font-size: $fs-24;
+        margin-bottom: 30px;
+    }
+    .s_innerPeople {
+        .s_listTeam {
+            text-align: center;
+            margin-bottom: 20px;
+            p {
+                margin-bottom: 0;
+            }
+            .s_infor {
+                .name {
+                    margin-top: 10px;
+                    font-weight: $fw-600;
+                }
+            }
+        }
+    }
+}
+.s-ourService {
+    padding: 50px 0;
+    .s_title {
+        font-size: $fs-24;
+        font-weight: $fw-600;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .s_wrapperService {
+        .s_item {
+            text-align: center;
+            .s_thumb img {
+                margin: 0 auto;
+                width: 30%;
+            }
+            .s_content {
+                .s_service {
+                    margin: 20px 0 10px 0;
+                    font-weight: $fw-600;
+                }
+            }
+        }
+    }
+}

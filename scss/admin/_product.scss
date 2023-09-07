@@ -1,0 +1,30 @@
+.c-dashboard {
+    .c_right {
+        form {
+            input[type="file"] {
+                background-color: #fff;
+                border: 1px solid #000;
+                border-radius: 3px;
+                padding: 8px 5px;
+                width: 100%;
+                cursor: pointer;
+            }
+            button {
+                margin-top: 30px;
+            }
+        }
+        table {
+            margin-top: 30px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #2b3674;
+            padding: 8px;
+            text-align: left;
+            text-align: center;
+        }
+    }
+}

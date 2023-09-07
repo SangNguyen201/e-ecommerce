@@ -1,0 +1,24 @@
+.c-product {
+    cursor: pointer;
+    .c_thumb {
+        position: relative;
+        .c_discount {
+            @include posAbsolute("tr", 10px, 10px);
+            width: 70px;
+            height: 30px;
+            color: white;
+            background-color: #c70000;
+            @include display($justify: center, $align: center);
+        }
+    }
+    .c_infor {
+        text-align: center;
+        .c_name {
+            margin: 10px 0 0 5px;
+            font-weight: $fw-600;
+        }
+        .c_price {
+            margin-bottom: 0;
+        }
+    }
+}

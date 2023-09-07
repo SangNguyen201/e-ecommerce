@@ -1,0 +1,55 @@
+body {
+    background-color: #f4f7fe;
+}
+.c-dashboard {
+    h3 {
+        color: #2b3674;
+        font-weight: $fw-700;
+    }
+    .c_left {
+        padding: 30px 20px;
+        background-color: #fff;
+        height: 97vh;
+        ul {
+            li {
+                margin-bottom: 25px;
+                cursor: pointer;
+                position: relative;
+            }
+            i {
+                margin-right: 10px;
+                color: #2b3674;
+            }
+            .c_childMenu {
+                padding-left: 22px;
+                overflow: hidden;
+                transition: 0.5s;
+                height: 0;
+                &.active {
+                    height: 200px;
+                }
+            }
+            span {
+                margin-left: 20px;
+                transition: 0.5s;
+                display: inline-block;
+                &.active {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+    .c_user {
+        background-color: #fff;
+        padding: 0 5px 0 10px;
+        height: 3.5rem;
+        color: #9bb9ff;
+        border-radius: 50px;
+        img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+    }
+}

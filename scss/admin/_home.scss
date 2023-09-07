@@ -1,0 +1,42 @@
+.c-dashboard {
+    .c_right {
+        padding: 30px;
+        form {
+            width: 100%;
+            margin: 0 auto;
+            .s_item {
+                padding-left: 0 !important;
+                position: relative;
+                .showImg {
+                    @include posAbsolute("tr", 48px, 18px);
+                    width: 33px;
+                    height: 35px;
+                    object-fit: cover;
+                }
+                .showImg-2 {
+                    @include posAbsolute("tr", 48px, 18px);
+                    width: 33px;
+                    height: 35px;
+                    object-fit: cover;
+                }
+            }
+            select {
+                width: 100%;
+            }
+        }
+        label,
+        input {
+            width: 100%;
+            display: block;
+            padding: 10px 5px;
+        }
+    }
+    select {
+        padding: 12px 5px;
+    }
+    table {
+        img {
+            width: 50px;
+        }
+    }
+}

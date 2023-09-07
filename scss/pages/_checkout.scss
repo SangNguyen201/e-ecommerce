@@ -1,0 +1,51 @@
+.s-checkout {
+    padding: 150px 0 100px 0;
+    .s_inner {
+        .s_theme {
+            font-weight: $fw-700;
+            margin-bottom: 20px;
+        }
+        .s_billDetail {
+            form {
+                .form-group {
+                    display: flex;
+                    margin-bottom: 20px;
+                    label {
+                        width: 30%;
+                        margin-bottom: 5px;
+                        margin-right: 20px;
+                    }
+                    input {
+                        width: 100%;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                    }
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+            button {
+                width: 100%;
+            }
+        }
+        .s_yourOrder {
+            padding: 30px;
+            background-color: #f3f3f39f;
+            @media (max-width: 992px) {
+                margin-top: 30px;
+            }
+            .s_shipping {
+                @include display($justify: between, $align: center);
+                padding: 15px -0;
+                border-bottom: 1px solid #ccc;
+            }
+            .firt {
+                @include display($justify: between, $align: center);
+                padding-bottom: 15px !important;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+}
