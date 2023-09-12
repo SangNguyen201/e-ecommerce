@@ -2,11 +2,12 @@ async function displayBanner() {
     const API_BANNER = `${API_LINK}/adminBanner`;
     let data = await fetchData(API_BANNER);
     const banner = document.querySelector(".s-banner .s_inner");
+    // style="--bg:${item.color}" => thuộc class s_item
     data.forEach((item, index) => {
         banner.innerHTML += `
-        <div class="s_item ${index == 0 && "active"}" style="--bg:${item.color}">
-            <div class="row m-0 align-items-center">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="s_item ${index == 0 && "active"}">
+            <div class="row mx-0">
+                <div class="col-lg-6 col-md-6 col-sm-6 px-0">
                     <div class="s_content">
                     <h3>${item.title}</h3>
                     <p>${item.desc} ?</p>
@@ -14,8 +15,8 @@ async function displayBanner() {
                     <button class="c-button-1">SHOP NOW</button>
                     </a>
                 </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 px-0">
                     <div class="s_thumb">
                         <img src='${item.banner}' alt="imgBanner" />
                     </div>
@@ -35,7 +36,7 @@ async function displayCate() {
     const listCateTab = document.querySelector(".s_collection ul");
     data.forEach((item, index) => {
         category.innerHTML += `
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4 fix_item">
         <a href="listProduct.html?Cate=${item.name}" class="s_item">
             <img src="${item.img}" alt='${item.name}'/>
             <div class="s_overflay">
@@ -80,7 +81,7 @@ function renderProductList(data, selector) {
     selector.innerHTML = "";
     data.forEach((item) => {
         selector.innerHTML += `
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6 fix_item">
         <a href="detailProduct.html?id=${item.id}" class="c-product">
             <div class="c_thumb">
                 <img src=${item.img} alt="imgProduct" />

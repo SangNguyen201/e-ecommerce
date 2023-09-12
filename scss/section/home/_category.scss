@@ -1,5 +1,11 @@
 .s-category {
     margin: 4rem 0;
+    .fix_item {
+        @media (max-width: 500px) {
+            width: 350px;
+            margin: 0 auto;
+        }
+    }
     .s_item {
         position: relative;
         margin-bottom: 20px;
@@ -10,10 +16,17 @@
             h3 {
                 color: $color-white;
             }
+            @media (max-width: 500px) {
+                width: 325px;
+                margin: 0 auto;
+            }
         }
         &:hover .s_overflay {
             overflow: visible;
             opacity: 0;
+        }
+        @media (max-width: 992px) {
+            margin-bottom: 20px;
         }
     }
 }

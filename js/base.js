@@ -42,7 +42,7 @@ function componentHeaders() {
             </ul>
             <div class="c_hiddenSearch">
                 <i class="fa-thin fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search for product..." />
+                <input type="text" placeholder="Search..." />
             </div>
         </div>
     </div>

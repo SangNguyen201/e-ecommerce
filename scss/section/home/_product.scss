@@ -17,4 +17,10 @@
             font-weight: 600;
         }
     }
+    .fix_item {
+        @media (max-width: 500px) {
+            width: 350px;
+            margin: 0 auto;
+        }
+    }
 }
