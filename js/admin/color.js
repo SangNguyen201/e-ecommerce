@@ -33,6 +33,7 @@ btnAdd.addEventListener("click", async (event) => {
     let res = await fetch(API_COLOR, option);
     if (res.ok) {
         alert("Add Success");
+        displayColor();
     } else {
         alert("Add Fail");
     }
@@ -41,6 +42,7 @@ btnAdd.addEventListener("click", async (event) => {
 async function displayColor() {
     const tableBody = document.querySelector("table tbody");
     let data = await fetchData(API_COLOR);
+    tableBody.innerHTML = "";
     data.forEach((item) => {
         tableBody.innerHTML += `
         <tr>
@@ -84,6 +86,7 @@ btnUpdate.addEventListener("click", async (event) => {
     let res = await fetch(`${API_COLOR}/${id}`, option);
     if (res.ok) {
         alert("Update Success");
+        displayColor();
     } else {
         alert("Update Fail");
     }
@@ -99,6 +102,7 @@ async function deleteColor(id) {
     let res = await fetch(`${API_COLOR}/${id}`, option);
     if (res.ok) {
         alert("Delete Success");
+        displayColor();
     } else {
         alert("Delete Fail");
     }

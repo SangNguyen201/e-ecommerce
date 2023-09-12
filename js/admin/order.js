@@ -1,9 +1,9 @@
 const API_ORDER = `${API_LINK}/inforUserOrder`;
-
 async function displayOrder() {
     const table = document.querySelector(".table-user tbody");
     let dataInforUser = await fetchData(API_ORDER);
     let sum = 0;
+    table.innerHTML = "";
     dataInforUser.forEach((item) => {
         item.cart.forEach((data) => {
             sum += data.choice.quanlity * data.detail.pirce;
@@ -76,6 +76,7 @@ async function viewCart(id) {
 }
 
 async function deleteCart(id) {
+    const tableDetail = document.querySelector(".tableDetail");
     const option = {
         method: "DELETE",
         headers: {
@@ -83,8 +84,10 @@ async function deleteCart(id) {
         },
     };
     let res = await fetch(`${API_ORDER}/${id}`, option);
+    tableDetail.innerHTML = "";
     if (res.ok) {
         alert("Delete Success");
+        displayOrder();
     } else {
         alert("Delete Fail");
     }

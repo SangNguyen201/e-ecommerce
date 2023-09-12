@@ -38,6 +38,7 @@ btnBanner.addEventListener("click", async (e) => {
     let res = await fetch(API_BANNER, option);
     if (res.ok) {
         alert("Add Success");
+        showDisplay();
     } else {
         alert("Add Fail");
     }
@@ -46,6 +47,7 @@ btnBanner.addEventListener("click", async (e) => {
 async function showDisplay() {
     const table = document.querySelector("table tbody");
     let data = await fetchData(API_BANNER);
+    table.innerHTML = "";
     data.forEach((item) => {
         table.innerHTML += `
         <tr>
@@ -72,6 +74,7 @@ async function deleteBanner(id) {
     let res = await fetch(`${API_BANNER}/${id}`, option);
     if (res.ok) {
         alert("Delete Success");
+        showDisplay();
     } else {
         alert("Delete Fail");
     }
@@ -88,8 +91,10 @@ async function updateBanner(id) {
     updataBanner.setAttribute("data-id", id);
     btnBanner.style.display = "none";
 }
-updataBanner.addEventListener("click", async () => {
+updataBanner.addEventListener("click", async (e) => {
+    e.preventDefault();
     btnBanner.style.display = "block";
+    updataBanner.style.display = "none";
     let id = updataBanner.getAttribute("data-id");
     let objBanner = {
         banner: uploadImage || imgGet.src,
@@ -108,6 +113,7 @@ updataBanner.addEventListener("click", async () => {
     let res = await fetch(`${API_BANNER}/${id}`, option);
     if (res.ok) {
         alert("Update Success");
+        showDisplay();
     } else {
         alert("Fail");
     }

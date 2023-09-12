@@ -1,4 +1,4 @@
-const API_LINK = `http://localhost:3000`;
+const API_LINK = `https://ecommerce-drile.onrender.com`;
 const API_INFO = `${API_LINK}/infor`;
 const loginUser = JSON.parse(localStorage.getItem("LOGINUSER"));
 // scroll nav header

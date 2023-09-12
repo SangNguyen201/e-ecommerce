@@ -41,6 +41,7 @@ btnAdd.addEventListener("click", async (event) => {
     let res = await fetch(API_USER, option);
     if (res.ok) {
         alert("Save Success");
+        displayUser();
     } else {
         alert("Save Fail");
     }
@@ -49,6 +50,7 @@ btnAdd.addEventListener("click", async (event) => {
 async function displayUser() {
     const table = document.querySelector("table tbody");
     let data = await fetchData(API_USER);
+    table.innerHTML = "";
     data.forEach((item) => {
         table.innerHTML += `
         <tr>
@@ -83,7 +85,6 @@ async function updateList(id) {
     let data = await fetchData(`${API_LISTPRODUCT}/${id}`);
     inputCategories.value = data.categories;
     imgGet.src = data.img;
-    imgGet1.src = data.imgMore;
     inputName.value = data.names;
     inputPrice.value = data.pirce;
     inputDiscount.value = data.discount;
@@ -94,8 +95,10 @@ async function updateList(id) {
     btnUpdate.setAttribute("data-id", id);
 }
 
-btnUpdate.addEventListener("click", async () => {
+btnUpdate.addEventListener("click", async (e) => {
+    e.preventDefault();
     btnAdd.style.display = "block";
+    btnUpdate.style.display = "none";
     let id = btnUpdate.getAttribute("data-id");
     const userObj = {
         email: inputEmail.value,
@@ -116,6 +119,7 @@ btnUpdate.addEventListener("click", async () => {
     let res = await fetch(`${API_USER}/${id}`, option);
     if (res.ok) {
         alert("Update Success");
+        displayUser();
     } else {
         alert("Update Fail");
     }
@@ -131,6 +135,7 @@ async function deleteUser(id) {
     let res = await fetch(`${API_USER}/${id}`, option);
     if (res.ok) {
         alert("Delete Success");
+        displayUser();
     } else {
         alert("Delete Fail");
     }

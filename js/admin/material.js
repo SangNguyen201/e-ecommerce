@@ -31,6 +31,7 @@ btnAdd.addEventListener("click", async (event) => {
     let res = await fetch(API_MATERIAL, option);
     if (res.ok) {
         alert("Add Success");
+        displayMaterial();
     } else {
         alert("Add Fail");
     }
@@ -38,6 +39,7 @@ btnAdd.addEventListener("click", async (event) => {
 async function displayMaterial() {
     const bodyTable = document.querySelector("table tbody");
     let data = await fetchData(API_MATERIAL);
+    bodyTable.innerHTML = "";
     data.forEach((item) => {
         bodyTable.innerHTML += `
         <tr>
@@ -62,7 +64,8 @@ async function updateMaterial(id) {
     material.value = data.material;
     btnUpdate.setAttribute("data-id", id);
 }
-btnUpdate.addEventListener("click", async () => {
+btnUpdate.addEventListener("click", async (e) => {
+    e.preventDefault();
     btnUpdate.style.display = "none";
     let id = btnUpdate.getAttribute("data-id");
     let materialObj = {
@@ -79,6 +82,7 @@ btnUpdate.addEventListener("click", async () => {
     let res = await fetch(`${API_MATERIAL}/${id}`, option);
     if (res.ok) {
         alert("Update Success");
+        displayMaterial();
     } else {
         alert("Update Fail");
     }
@@ -94,6 +98,7 @@ async function deleteMaterial(id) {
     let res = await fetch(`${API_MATERIAL}/${id}`, option);
     if (res.ok) {
         alert("Delete Success");
+        displayMaterial();
     } else {
         alert("Delete Fail");
     }

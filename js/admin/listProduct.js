@@ -17,6 +17,7 @@ async function displayCate() {
     const API_CATEGORY = `${API_LINK}/category`;
     const selectCate = document.querySelector("#selectCate");
     let data = await fetchData(API_CATEGORY);
+    selectCate.innerHTML = "";
     data.forEach((item) => {
         selectCate.innerHTML += `
         <option value="${item.name}">${item.name}</option>
@@ -28,6 +29,7 @@ async function displayColor() {
     const API_COLOR = `${API_LINK}/color`;
     const selectColor = document.querySelector("#selectColor");
     let data = await fetchData(API_COLOR);
+    selectColor.innerHTML = "";
     data.forEach((item) => {
         selectColor.innerHTML += `
         <option value="${item.name}">${item.name}</option>
@@ -39,6 +41,7 @@ async function displayMaterial() {
     const API_MATERIAL = `${API_LINK}/material`;
     const selectMaterial = document.querySelector("#selectMaterial");
     let data = await fetchData(API_MATERIAL);
+    selectMaterial.innerHTML = "";
     data.forEach((item) => {
         selectMaterial.innerHTML += `
         <option value="${item.material}">${item.material}</option>
@@ -80,6 +83,7 @@ btnAdd.addEventListener("click", async (event) => {
     let res = await fetch(API_LISTPRODUCT, option);
     if (res.ok) {
         alert("Add Success");
+        displayList();
     } else {
         alert("Add Fail");
     }
@@ -88,6 +92,7 @@ btnAdd.addEventListener("click", async (event) => {
 async function displayList() {
     const table = document.querySelector("table tbody");
     let data = await fetchData(API_LISTPRODUCT);
+    table.innerHTML = "";
     data.forEach((item) => {
         table.innerHTML += `
         <tr>
@@ -124,8 +129,10 @@ async function updateList(id) {
     btnUpdate.setAttribute("data-id", id);
 }
 
-btnUpdate.addEventListener("click", async () => {
+btnUpdate.addEventListener("click", async (e) => {
+    e.preventDefault();
     btnAdd.style.display = "block";
+    btnUpdate.style.display = "none";
     let id = btnUpdate.getAttribute("data-id");
     let productObj = {
         categories: inputCategories.value,
@@ -148,6 +155,7 @@ btnUpdate.addEventListener("click", async () => {
     let res = await fetch(`${API_LISTPRODUCT}/${id}`, option);
     if (res.ok) {
         alert("Update Success");
+        displayList();
     } else {
         alert("Update Fail");
     }
@@ -163,6 +171,7 @@ async function deleteList(id) {
     let res = await fetch(`${API_LISTPRODUCT}/${id}`, option);
     if (res.ok) {
         alert("Delete Success");
+        displayList();
     } else {
         alert("Delete Fail");
     }

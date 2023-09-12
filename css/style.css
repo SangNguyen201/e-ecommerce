@@ -1100,20 +1100,20 @@ footer .c_footerBottom .c_inner .c_payment li {
   }
 }
 .s-cart .s_innerCart .s_cartItem table .quantity .s_number input {
-  padding: 8px;
-  width: 90px;
+  padding: 7px;
+  width: 70%;
   font-weight: 700;
 }
 .s-cart .s_innerCart .s_cartItem table .quantity .s_number .s_increase {
   position: absolute;
-  top: 0;
-  right: 5px;
+  top: -5px;
+  right: 10px;
   cursor: pointer;
 }
 .s-cart .s_innerCart .s_cartItem table .quantity .s_number .s_reduce {
   position: absolute;
-  bottom: 0;
-  right: 5px;
+  bottom: -5px;
+  right: 10px;
   cursor: pointer;
 }
 .s-cart .s_innerCart .s_cartItem th,

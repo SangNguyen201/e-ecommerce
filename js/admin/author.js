@@ -1,4 +1,4 @@
-const API_LINK = `http://localhost:3000`;
+const API_LINK = `https://ecommerce-drile.onrender.com`;
 const API_AUTHOR = `${API_LINK}/user`;
 const email = document.querySelector("input[name='email']");
 const password = document.querySelector("input[name='password']");

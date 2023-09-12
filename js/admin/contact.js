@@ -3,7 +3,7 @@ const API_CONTACTADMIN = `${API_LINK}/contact`;
 async function displayContact() {
     const table = document.querySelector("table tbody");
     let dataContact = await fetchData(API_CONTACTADMIN);
-    console.log("dataContact: ", dataContact);
+    table.innerHTML = "";
     dataContact.forEach((data) => {
         table.innerHTML += `
         <tr>
@@ -38,6 +38,7 @@ async function deleteContact(id) {
     let res = await fetch(`${API_CONTACTADMIN}/${id}`, option);
     if (res.ok) {
         alert("Delete Success");
+        displayContact();
     } else {
         alert("Delete Fail");
     }

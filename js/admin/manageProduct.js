@@ -4,7 +4,7 @@ const imgInput = document.querySelector("input[name='imgCategory']");
 const category = document.querySelector("input[name='nameCategory']");
 const btnCaterogy = document.querySelector(".c-dashboard #btb_category");
 const showTable = document.querySelector("table tbody");
-const updateCategory = document.querySelector("#update_category");
+const btnUpdate = document.querySelector("#update_category");
 
 //Convert ảnh sang base 64
 let uploadImage = "";
@@ -33,6 +33,7 @@ btnCaterogy.addEventListener("click", async (event) => {
     let res = await fetch(API_CATEGORY, option);
     if (res.ok) {
         alert("Add Success !");
+        displayCategory();
     } else {
         alert("Fail !");
     }
@@ -40,6 +41,7 @@ btnCaterogy.addEventListener("click", async (event) => {
 
 async function displayCategory() {
     const data = await fetchData(API_CATEGORY);
+    showTable.innerHTML = "";
     data.forEach((item) => {
         showTable.innerHTML += `
     <tr>
@@ -66,6 +68,7 @@ async function deleteItem(id) {
     let res = await fetch(`${API_CATEGORY}/${id}`, option);
     if (res.ok) {
         alert("Delete Success");
+        displayCategory();
     } else {
         alert("Fail");
     }
@@ -75,13 +78,15 @@ async function updateItem(id) {
     let data = await fetchData(`${API_CATEGORY}/${id}`);
     imgGet.src = data.img;
     category.value = data.name;
-    updateCategory.style.display = "block";
-    updateCategory.setAttribute("data-id", id);
+    btnUpdate.style.display = "block";
+    btnUpdate.setAttribute("data-id", id);
     btnCaterogy.style.display = "none";
 }
-updateCategory.addEventListener("click", async () => {
+btnUpdate.addEventListener("click", async (e) => {
+    e.preventDefault();
     btnCaterogy.style.display = "block";
-    let id = updateCategory.getAttribute("data-id");
+    btnUpdate.style.display = "none";
+    let id = btnUpdate.getAttribute("data-id");
     let newItem = {
         img: uploadImage || imgGet.src,
         name: category.value,
@@ -96,6 +101,7 @@ updateCategory.addEventListener("click", async () => {
     let res = await fetch(`${API_CATEGORY}/${id}`, option);
     if (res.ok) {
         alert("Update Success");
+        displayCategory();
     } else {
         alert("Update Fail");
     }

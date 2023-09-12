@@ -1,4 +1,4 @@
-const API_LINK = `http://localhost:3000`;
+const API_LINK = `https://ecommerce-drile.onrender.com`;
 const admin = JSON.parse(localStorage.getItem("ADMIN"));
 function checkAuthor() {
     if (!admin) {

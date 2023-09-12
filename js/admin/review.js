@@ -33,6 +33,7 @@ btnAdd.addEventListener("click", async (event) => {
     let res = await fetch(API_REVIEW, option);
     if (res.ok) {
         alert("Add Success");
+        displayReview();
     } else {
         alert("Add Fail");
     }
@@ -41,6 +42,7 @@ btnAdd.addEventListener("click", async (event) => {
 async function displayReview() {
     const table = document.querySelector("table tbody");
     let data = await fetchData(API_REVIEW);
+    table.innerHTML = "";
     data.forEach((item) => {
         table.innerHTML += `
         <tr>
@@ -66,6 +68,7 @@ async function deleteReview(id) {
     let res = await fetch(`${API_REVIEW}/${id}`, option);
     if (res.ok) {
         alert("Delete Success");
+        displayReview();
     } else {
         alert("Delete Fail");
     }
@@ -81,8 +84,10 @@ async function updateReview(id) {
     btnAdd.style.display = "none";
 }
 
-btnUpdate.addEventListener("click", async () => {
+btnUpdate.addEventListener("click", async (e) => {
+    e.preventDefault();
     btnAdd.style.display = "block";
+    btnUpdate.style.display = "none";
     let id = btnUpdate.getAttribute("data-id");
     let titleObj = {
         avatar: uploadImage,
@@ -99,6 +104,7 @@ btnUpdate.addEventListener("click", async () => {
     let res = await fetch(`${API_REVIEW}/${id}`, option);
     if (res.ok) {
         alert("Update Success");
+        displayReview();
     } else {
         alert("Fail");
     }
