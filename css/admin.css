@@ -11,7 +11,8 @@ body {
   font-weight: 400;
   position: relative;
 }
-body #loading {
+
+#loading {
   width: 50px;
   position: fixed;
   top: 50%;
