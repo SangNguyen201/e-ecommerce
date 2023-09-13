@@ -4,7 +4,20 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: $fs-16;
+    font-weight: $fw-400;
+    position: relative;
+    #loading {
+        width: 50px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+}
 #logout {
     margin-right: 10px;
     color: red;
@@ -29,19 +42,4 @@ a {
 input,
 button {
     font-family: inherit;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-    font-size: $fs-16;
-    font-weight: $fw-400;
-    position: relative;
-    #loading {
-        width: 50px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-    }
 }
