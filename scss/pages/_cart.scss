@@ -1,6 +1,6 @@
 .s-cart {
     padding: 150px 0 100px 0;
-    @media (max-width: 500px) {
+    @media (max-width: 575px) {
         font-size: 12px;
     }
     .s_innerCart {
@@ -9,7 +9,6 @@
                 width: 100%;
                 border-collapse: collapse;
                 border: 1px solid #ddd;
-
                 .imgs {
                     width: 100px;
                     height: 80px;
@@ -22,14 +21,8 @@
                         @media (max-width: 992px) {
                             width: 65%;
                         }
-                        @media (max-width: 576px) {
+                        @media (max-width: 575px) {
                             width: 85%;
-                        }
-                        @media (max-width: 500px) {
-                            width: 100%;
-                        }
-                        @media (max-width: 375px) {
-                            width: 100%;
                         }
                         input {
                             padding: 7px;
@@ -92,6 +85,9 @@
             button {
                 @include button();
                 width: 100%;
+                @media (max-width: 575px) {
+                    font-size: 0.75rem;
+                }
             }
         }
     }

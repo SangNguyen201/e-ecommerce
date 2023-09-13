@@ -3,7 +3,7 @@
     @media (max-width: 992px) {
         padding: 100px 0 50px 0;
     }
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
         display: none;
     }
     .s_list {
@@ -43,11 +43,14 @@
     .s_wrapper {
         .s_title {
             font-weight: $fw-700;
-            @media (max-width: 375px) {
+            @media (max-width: 575px) {
                 font-size: 0.75rem;
             }
         }
         .s_filter {
+            .s_itemFilter {
+                margin: 0 20px;
+            }
             li {
                 display: flex;
                 margin-bottom: 15px;
@@ -58,20 +61,13 @@
                     height: 20px;
                     margin-right: 10px;
                 }
-                @media (max-width: 375px) {
+                @media (max-width: 575px) {
                     font-size: 0.75rem;
                 }
             }
-            @media (max-width: 500px) {
+            @media (max-width: 575px) {
                 display: flex;
                 justify-content: center;
-                gap: 20px;
-            }
-            @media (max-width: 375px) {
-                display: flex;
-                justify-content: center;
-                gap: 5px;
-                padding: 0;
             }
         }
         .s_listCard {
@@ -80,13 +76,12 @@
                 .c_thumb {
                     position: relative;
                     overflow: hidden;
+                    width: 350px;
+                    margin: 0 auto;
                     img {
-                        @media (max-width: 500px) {
-                            width: 300px;
-                            margin: 0 auto;
-                        }
-                        @media (max-width: 375px) {
+                        @media (max-width: 575px) {
                             width: 250px;
+                            margin: 0 auto;
                         }
                     }
                     .s_overflay {
@@ -129,9 +124,10 @@
                 }
             }
         }
-        @media (max-width: 500px) {
+        @media (max-width: 575px) {
             ul#filterPrice {
                 height: 135px;
+                width: 80px;
                 overflow: scroll;
             }
         }
@@ -148,15 +144,16 @@
     opacity: 0;
     visibility: hidden;
     @include posAbsolute("tr", 70px, -10px);
-    @media (max-width: 500px) {
+    @media (max-width: 575px) {
         padding: 10px;
+        width: 15rem;
     }
     p {
         border-bottom: 1px solid #8a2424;
     }
     .s_inner {
         img {
-            @media (max-width: 500px) {
+            @media (max-width: 575px) {
                 width: 100px;
                 margin: 0 auto;
             }

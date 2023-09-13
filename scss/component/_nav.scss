@@ -3,15 +3,6 @@ header {
     position: fixed;
     transition: 0.5s;
     z-index: 100;
-    .c-header {
-        padding: 0 15px;
-        @media (max-width: 500px) {
-            padding: 0;
-        }
-        @media (max-width: 375px) {
-            padding: 0;
-        }
-    }
     &.active {
         background-color: $color-white;
         box-shadow: 0px 7px 11px -2px rgba(0, 0, 0, 0.58);
@@ -23,17 +14,7 @@ header {
         height: 60px;
         padding-top: 10px;
         @include display($justify: between, $align: none);
-        @media (max-width: 767px) {
-            @include display($justify: center, $align: none);
-            gap: 110px;
-        }
-        @media (max-width: 500px) {
-            gap: 50px;
-        }
-        @media (max-width: 375px) {
-            gap: 0px;
-            height: 40px;
-        }
+
         .c_listMenu {
             @include display($justify: center, $align: none);
             .c_logo {
@@ -42,12 +23,6 @@ header {
                     width: $fs-66;
                     object-fit: contain;
                     cursor: pointer;
-                }
-                @media (max-width: 500px) {
-                    margin-right: 20px;
-                }
-                @media (max-width: 375px) {
-                    margin-right: 5px;
                 }
             }
             .c_menu {
@@ -73,9 +48,12 @@ header {
         }
         .c_listIcon {
             position: relative;
+            @media (max-width: 575px) {
+                margin-right: 15px;
+            }
             li {
                 display: inline-block;
-                margin-left: 20px;
+                margin-left: 10px;
                 cursor: pointer;
                 transition: 0.5s;
                 i {
@@ -84,12 +62,6 @@ header {
                     &:hover {
                         font-weight: $fw-500;
                     }
-                }
-                @media (max-width: 767px) {
-                    margin-left: 5px;
-                }
-                @media (max-width: 500px) {
-                    margin-left: 5px;
                 }
             }
             .c_cart {
@@ -142,7 +114,7 @@ header {
     margin-bottom: 10px;
     input {
         width: 100%;
-        padding: 5px;
+        padding: 10px 5px;
         background-color: #f6f6f6;
         border: none;
         outline: none;

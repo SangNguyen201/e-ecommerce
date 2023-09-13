@@ -9,7 +9,7 @@
             p {
                 margin-bottom: 0;
                 font-weight: $fw-500;
-                @media (max-width: 375px) {
+                @media (max-width: 575px) {
                     font-size: 0.75rem;
                 }
             }
@@ -25,27 +25,16 @@
                     margin: 5px 0 10px 0;
                     font-size: 1.5rem;
                 }
-                @media (max-width: 500px) {
-                    margin: 5px 0 10px 0;
-                    font-size: 1rem;
-                }
-                @media (max-width: 375px) {
-                    margin: 5px 0 10px 0;
-                    font-size: 1rem;
-                }
             }
             button {
                 @media (max-width: 767px) {
                     margin-top: 10px;
                     padding: 10px 20px;
                 }
-                @media (max-width: 500px) {
+                @media (max-width: 575px) {
                     margin-top: 5px;
                     padding: 8px 15px;
-                }
-                @media (max-width: 375px) {
-                    padding: 7px 15px;
-                    font-size: 0.6rem;
+                    font-size: 0.75rem;
                 }
             }
         }
@@ -57,9 +46,6 @@
     .s_wrapper {
         position: relative;
         height: 250px;
-        @media (max-width: 375px) {
-            padding: 0;
-        }
         i {
             font-size: 3rem;
         }
@@ -91,7 +77,7 @@
             @include posAbsolute("centerBotX", -20px, 50%);
             i {
                 font-size: 1rem;
-                @media (max-width: 375px) {
+                @media (max-width: 575px) {
                     font-size: 0.7rem;
                 }
             }
@@ -107,9 +93,6 @@
                 @include posAbsolute("centerBotX", -60px, 50%);
             }
             @media (max-width: 575px) {
-                @include posAbsolute("centerBotX", -60px, 50%);
-            }
-            @media (max-width: 375px) {
                 @include posAbsolute("centerBotX", -70px, 50%);
             }
         }
@@ -125,7 +108,7 @@
 }
 .s-listProduct {
     img {
-        @media (max-width: 375px) {
+        @media (max-width: 575px) {
             width: 250px;
             margin: 0 auto;
         }

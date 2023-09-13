@@ -6,6 +6,9 @@ footer {
         border-bottom: 1px solid $color-secondary;
         .c_logo img {
             width: $fs-120;
+            @media (max-width: 575px) {
+                width: $fs-66;
+            }
         }
         .c_inner {
             .c_infor {

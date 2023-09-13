@@ -7,7 +7,7 @@
     }
     .s_collection li {
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 5px;
         font-size: $fs-14;
         cursor: pointer;
         &:hover {
@@ -16,12 +16,9 @@
         &.active {
             font-weight: 600;
         }
-        @media (max-width: 375px) {
-            margin: 0 10px;
-        }
     }
     .fix_item {
-        @media (max-width: 500px) {
+        @media (max-width: 575px) {
             width: 350px;
             margin: 0 auto;
         }

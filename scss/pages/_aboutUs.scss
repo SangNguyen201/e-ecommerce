@@ -4,9 +4,10 @@
     @media (max-width: 992px) {
         padding: 100px 0 50px 0;
     }
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
         padding: 100px 0 300px 0;
     }
+
     .s_wrapper {
         position: relative;
         .s_listBanner {
@@ -49,7 +50,7 @@
             @media (max-width: 992px) {
                 @include posAbsolute("tr", 25%, 20px);
             }
-            @media (max-width: 576px) {
+            @media (max-width: 575px) {
                 @include posAbsolute("tr", 133%, 20px);
             }
         }
@@ -62,6 +63,9 @@
         font-weight: $fw-600;
         font-size: $fs-24;
         margin-bottom: 30px;
+        @media (max-width: 575px) {
+            font-size: $fs-20;
+        }
     }
     .s_innerPeople {
         .s_listTeam {
@@ -78,6 +82,14 @@
             }
         }
     }
+    .s_thumb {
+        img {
+            @media (max-width: 575px) {
+                width: 350px;
+                margin: 0 auto;
+            }
+        }
+    }
 }
 .s-ourService {
     padding: 50px 0;
@@ -86,6 +98,9 @@
         font-weight: $fw-600;
         text-align: center;
         margin-bottom: 30px;
+        @media (max-width: 575px) {
+            font-size: $fs-20;
+        }
     }
     .s_wrapperService {
         .s_item {
@@ -93,6 +108,10 @@
             .s_thumb img {
                 margin: 0 auto;
                 width: 30%;
+                @media (max-width: 575px) {
+                    width: 50px;
+                    margin: 0 auto;
+                }
             }
             .s_content {
                 .s_service {
