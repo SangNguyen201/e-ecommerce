@@ -1,18 +1,19 @@
 const API_ORDERUSER = `${API_LINK}/inforUserOrder`;
+const API_LOGINUSER = `${API_LINK}/user`;
 const fullName = document.querySelector("input[name='Fullname']");
 const email = document.querySelector("input[name='Email']");
 const phone = document.querySelector("input[name='Phone']");
 const address = document.querySelector("input[name='Address']");
 const note = document.querySelector("textarea");
 const btnCheckOut = document.querySelector(".btn-checkout");
-const API_LOGINUSER = `${API_LINK}/user`;
 async function findUser() {
-    let dataUser = await fetchData(API_ORDERUSER);
-    let find = dataUser.find((item) => item.email == loginUser.email);
-    fullName.value = find.userName;
-    email.value = find.email;
-    phone.value = find.phone;
-    address.value = find.address;
+    const loginUser = JSON.parse(localStorage.getItem("LOGINUSER"));
+    let dataUser = await fetchData(API_LOGINUSER);
+    let findOrder = dataUser.find((item) => item.email == loginUser.email);
+    email.value = findOrder.email;
+    phone.value = findOrder.phone;
+    address.value = findOrder.address;
+    fullName.value = findOrder.userName;
 }
 findUser();
 btnCheckOut.addEventListener("click", async (event) => {
@@ -41,14 +42,16 @@ btnCheckOut.addEventListener("click", async (event) => {
         body: JSON.stringify(orderUserObj),
     };
     let res = await fetch(API_ORDERUSER, option);
+    console.log("res: ", res);
     if (res.ok) {
         alert("Save Success");
         localStorage.removeItem("LISTCART");
-        window.location.href = "index.html";
+        window.location.href = "complete.html";
     } else {
         alert("Save Fail");
     }
 });
+
 function displayResume() {
     let resume = document.querySelector(".s_yourOrder .s_content");
     let total = document.querySelector(".s_yourOrder .total .price");

@@ -14,12 +14,29 @@ window.addEventListener("scroll", () => {
 });
 // scroll nav header end
 // getData from url and db.json
+// async function fetchData(url) {
+//     const data = await fetch(url);
+//     const extractData = await data.json();
+//     return extractData;
+// }
 async function fetchData(url) {
-    const data = await fetch(url);
-    const extractData = await data.json();
-    return extractData;
-}
+    const loadingDiv = document.getElementById("loading");
+    loadingDiv.style.display = "block";
 
+    try {
+        const data = await fetch(url);
+        const extractData = await data.json();
+        loadingDiv.style.display = "none";
+
+        return extractData;
+    } catch (error) {
+        console.error(error);
+
+        loadingDiv.style.display = "none";
+
+        throw new Error("Đã xảy ra lỗi khi tải dữ liệu");
+    }
+}
 // getData from url and db.json end
 //component header
 function componentHeaders() {

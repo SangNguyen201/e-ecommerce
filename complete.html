@@ -18,43 +18,44 @@
             <div class="c-header container"></div>
             <!-- place header end -->
         </header>
+        <div id="loading">
+            <img src="img/loading-gif.gif" alt="loading" />
+        </div>
         <section class="s-complete container">
             <div class="s_letter">
                 <h3 class="s_title">Order Success</h3>
                 <p class="s_subtitle">Thank you for shopping at drile</p>
-                <button class="c-button-1">Discover other products</button>
+                <a href="listProduct.html">
+                    <button class="c-button-1">Discover other products</button>
+                </a>
             </div>
             <div class="s_inforOrder">
                 <p class="s_titleOrder">Information Order</p>
                 <div class="s_inner">
-                    <p>Time : <span>00:00</span></p>
-                    <p>Date : <span>00.00.2023</span></p>
+                    <p class="dateTime">Date & Time : <span></span></p>
                     <table>
-                        <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Price</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Nguyễn Văn A</td>
-                            <td>25</td>
-                            <td>Hà Nội</td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
                     </table>
                     <div class="s_charge">
                         <div class="s_itemCharge">
                             <p>Total Price</p>
-                            <p>400.000 <span>$</span></p>
+                            <p class="price"></p>
                         </div>
                         <div class="s_itemCharge">
                             <p>Shipping</p>
-                            <p>00.000 <span>$</span></p>
+                            <p class="shipping">00.000 <span>$</span></p>
                         </div>
                         <div class="s_itemCharge">
                             <p>Total Payment</p>
-                            <p>400.000 <span>$</span></p>
+                            <p class="total">400.000 <span>$</span></p>
                         </div>
                     </div>
                 </div>
@@ -62,14 +63,15 @@
             <div class="s_inforDelivery">
                 <p class="s_titleOrder">Information User</p>
                 <div class="s_content">
-                    <p>Fullname :</p>
-                    <p>Email :</p>
-                    <p>Phone :</p>
-                    <p>Address :</p>
+                    <p>Fullname : <span style="font-weight: 600" class="fullname"></span></p>
+                    <p>Email : <span style="font-weight: 600" class="email"></span></p>
+                    <p>Phone : <span style="font-weight: 600" class="phone"></span></p>
+                    <p>Address : <span style="font-weight: 600" class="address"></span></p>
                 </div>
             </div>
         </section>
         <footer></footer>
         <script src="js/base.js"></script>
+        <script src="js/complete.js"></script>
     </body>
 </html>

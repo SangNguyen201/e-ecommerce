@@ -11,7 +11,6 @@ btnLogin.addEventListener("click", async (event) => {
     let dataUser = await fetchData(API_USER);
     let isLogin = false;
     let findEmail = dataUser.find((data) => data.email == inputEmail.value);
-    console.log("findEmail: ", findEmail);
     if (findEmail) {
         emailError.innerHTML = "";
         if (findEmail.password == inputPassword.value) {

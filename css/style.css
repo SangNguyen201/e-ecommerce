@@ -39,6 +39,15 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  position: relative;
+}
+body #loading {
+  width: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 header {
@@ -1234,9 +1243,10 @@ footer .c_footerBottom .c_inner .c_payment li {
 }
 .s-complete .s_letter button {
   border-radius: 10px;
+  margin-top: 10px;
 }
 .s-complete .s_inforOrder {
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center;
 }
 .s-complete .s_inforOrder p {

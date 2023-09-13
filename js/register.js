@@ -53,6 +53,7 @@ btnRegister.addEventListener("click", async (event) => {
         let res = await fetch(API_USER, option);
         if (res.ok) {
             alert("Register Success");
+            window.location.href = "index.html";
         } else {
             alert("Register Fail");
         }

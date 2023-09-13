@@ -69,7 +69,6 @@ async function findUserOrder() {
     let findOrderUser = dataContracted.filter((item) => item.email == loginUser.email);
     const table = document.querySelector("#list-order");
     findOrderUser.forEach((item) => {
-        console.log("item: ", item);
         table.innerHTML += `
         <p>${item.date}</p>
         <table>
@@ -83,7 +82,6 @@ async function findUserOrder() {
             </thead>
             <tbody>
                 <tr>
-                    
                     ${item.cart.map((data) => {
                         return `
                         <td>${data.detail.names}</td>
