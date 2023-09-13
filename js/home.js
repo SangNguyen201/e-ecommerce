@@ -1,3 +1,4 @@
+alert("WEBSITE CỦA TỚ ĐANG LOAD !!! BẠN ĐỢI TÍ NHÉ");
 async function displayBanner() {
     const API_BANNER = `${API_LINK}/adminBanner`;
     let data = await fetchData(API_BANNER);
