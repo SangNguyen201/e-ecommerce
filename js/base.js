@@ -22,19 +22,14 @@ window.addEventListener("scroll", () => {
 async function fetchData(url) {
     const loadingDiv = document.getElementById("loading");
     loadingDiv.style.display = "block";
-
     try {
         const data = await fetch(url);
         const extractData = await data.json();
         loadingDiv.style.display = "none";
-
         return extractData;
     } catch (error) {
         console.error(error);
-
         loadingDiv.style.display = "none";
-
-        throw new Error("Đã xảy ra lỗi khi tải dữ liệu");
     }
 }
 // getData from url and db.json end
@@ -57,10 +52,6 @@ function componentHeaders() {
                 <li><a href="aboutus.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="c_hiddenSearch">
-                <i class="fa-thin fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search..." />
-            </div>
         </div>
     </div>
     <div class="c_listIcon">
@@ -111,6 +102,7 @@ function componentHeaders() {
         }
     });
 }
+
 componentHeaders();
 const btnHidden = document.querySelector("header .btnHiddenNav");
 const navHidden = document.querySelector("header .c_hiddenNav");
@@ -118,7 +110,7 @@ btnHidden.addEventListener("click", () => {
     navHidden.classList.toggle("active");
 });
 const displayMenu = document.querySelector(".c_menu ul");
-const hiddenMenu = document.querySelector(".c_menu .c_hiddenSearch");
+const hiddenMenu = document.querySelector(".c_hiddenSearch");
 const toggleMenu = document.querySelector(".c_listIcon .toggleMenu #search");
 toggleMenu.addEventListener("click", (e) => {
     displayMenu.classList.toggle("active");

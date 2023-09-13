@@ -11,7 +11,7 @@ async function displayBanner() {
                     <div class="s_content">
                     <h3>${item.title}</h3>
                     <p>${item.desc} ?</p>
-                    <a href="${item.link}">
+                    <a href="listProduct.html">
                     <button class="c-button-1">SHOP NOW</button>
                     </a>
                 </div>

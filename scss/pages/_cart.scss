@@ -1,11 +1,15 @@
 .s-cart {
     padding: 150px 0 100px 0;
+    @media (max-width: 500px) {
+        font-size: 12px;
+    }
     .s_innerCart {
         .s_cartItem {
             table {
                 width: 100%;
                 border-collapse: collapse;
                 border: 1px solid #ddd;
+
                 .imgs {
                     width: 100px;
                     height: 80px;
@@ -21,6 +25,12 @@
                         @media (max-width: 576px) {
                             width: 85%;
                         }
+                        @media (max-width: 500px) {
+                            width: 100%;
+                        }
+                        @media (max-width: 375px) {
+                            width: 100%;
+                        }
                         input {
                             padding: 7px;
                             width: 70%;
@@ -28,13 +38,13 @@
                         }
                         .s_increase {
                             position: absolute;
-                            top: -5px;
+                            top: -4px;
                             right: 10px;
                             cursor: pointer;
                         }
                         .s_reduce {
                             position: absolute;
-                            bottom: -5px;
+                            bottom: -4px;
                             right: 10px;
                             cursor: pointer;
                         }

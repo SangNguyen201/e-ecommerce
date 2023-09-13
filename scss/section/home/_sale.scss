@@ -9,6 +9,9 @@
             p {
                 margin-bottom: 0;
                 font-weight: $fw-500;
+                @media (max-width: 375px) {
+                    font-size: 0.75rem;
+                }
             }
             h3 {
                 margin: 5px 0 20px 0;
@@ -26,6 +29,10 @@
                     margin: 5px 0 10px 0;
                     font-size: 1rem;
                 }
+                @media (max-width: 375px) {
+                    margin: 5px 0 10px 0;
+                    font-size: 1rem;
+                }
             }
             button {
                 @media (max-width: 767px) {
@@ -35,6 +42,10 @@
                 @media (max-width: 500px) {
                     margin-top: 5px;
                     padding: 8px 15px;
+                }
+                @media (max-width: 375px) {
+                    padding: 7px 15px;
+                    font-size: 0.6rem;
                 }
             }
         }
@@ -46,6 +57,9 @@
     .s_wrapper {
         position: relative;
         height: 250px;
+        @media (max-width: 375px) {
+            padding: 0;
+        }
         i {
             font-size: 3rem;
         }
@@ -77,6 +91,9 @@
             @include posAbsolute("centerBotX", -20px, 50%);
             i {
                 font-size: 1rem;
+                @media (max-width: 375px) {
+                    font-size: 0.7rem;
+                }
             }
             li {
                 display: inline-block;
@@ -89,8 +106,11 @@
             @media (max-width: 992px) {
                 @include posAbsolute("centerBotX", -60px, 50%);
             }
-            @media (max-width: 576px) {
+            @media (max-width: 575px) {
                 @include posAbsolute("centerBotX", -60px, 50%);
+            }
+            @media (max-width: 375px) {
+                @include posAbsolute("centerBotX", -70px, 50%);
             }
         }
     }
@@ -101,5 +121,13 @@
     .s_wrapper {
         @include display($justify: center, $align: none);
         gap: 10px;
+    }
+}
+.s-listProduct {
+    img {
+        @media (max-width: 375px) {
+            width: 250px;
+            margin: 0 auto;
+        }
     }
 }

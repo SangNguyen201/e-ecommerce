@@ -86,7 +86,6 @@
         @include posAbsolute("centerBotX", 0, 50%);
         @include display($justify: center, $align: center);
         cursor: pointer;
-
         %arrow {
             font-size: $fs-32;
             color: $color-black;
@@ -105,10 +104,17 @@
             margin-right: 20px;
             font-size: 1.5rem;
         }
+        @media (max-width: 576px) {
+            @include posAbsolute("centerBotX", -60px, 50%);
+        }
     }
     button {
         @media (max-width: 500px) {
             margin-top: 0;
+        }
+        @media (max-width: 375px) {
+            padding: 7px 15px;
+            font-size: 0.6rem;
         }
     }
 }

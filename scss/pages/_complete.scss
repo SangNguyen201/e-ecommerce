@@ -1,5 +1,8 @@
 .s-complete {
     padding: 150px 0 100px 0;
+    @media (max-width: 500px) {
+        font-size: 14px;
+    }
     .s_titleOrder {
         font-size: $fs-24;
     }
@@ -36,6 +39,12 @@
             th {
                 background-color: #f2f2f2;
             }
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+            @media (max-width: 375px) {
+                width: 100%;
+            }
         }
         .s_charge {
             width: 60%;
@@ -46,6 +55,12 @@
                 @include display($justify: between, $align: center);
                 border-bottom: 1px solid #ddd;
                 padding: 10px;
+            }
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+            @media (max-width: 375px) {
+                width: 100%;
             }
         }
     }
@@ -58,6 +73,12 @@
             margin: 0 auto;
             text-align: left;
             padding: 10px;
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+            @media (max-width: 375px) {
+                width: 100%;
+            }
         }
     }
 }

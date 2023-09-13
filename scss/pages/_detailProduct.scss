@@ -25,6 +25,14 @@
                 margin-right: 25px;
                 cursor: pointer;
             }
+            .s_content {
+                .s_title {
+                    @media (max-width: 500px) {
+                        font-size: 1rem;
+                        font-weight: $fw-700;
+                    }
+                }
+            }
         }
     }
     .s_quantity {
@@ -72,6 +80,9 @@
     button {
         display: flex;
         margin: 20px auto;
+        @media (max-width: 375px) {
+            margin: 10px auto;
+        }
     }
 }
 .s-anorther {
@@ -79,6 +90,11 @@
     h3 {
         text-align: center;
         margin-bottom: 30px;
+        @media (max-width: 500px) {
+            margin-bottom: 0px;
+            font-size: 1rem;
+            font-weight: $fw-700;
+        }
     }
     .s_list {
         .s_item {
@@ -92,11 +108,17 @@
             }
         }
     }
+    img {
+        @media (max-width: 500px) {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
 }
 .s-popupDetail {
     padding: 20px;
     position: fixed;
-    background-color: #fff;
+    background-color: #d01010;
     box-shadow: -1px 0px 6px 2px #d0d0d0;
     border-radius: 20px;
     width: 20rem;

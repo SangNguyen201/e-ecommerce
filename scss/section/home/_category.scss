@@ -5,6 +5,10 @@
             width: 350px;
             margin: 0 auto;
         }
+        @media (max-width: 375px) {
+            width: 250px;
+            margin: 0 auto;
+        }
     }
     .s_item {
         position: relative;
@@ -15,9 +19,16 @@
             @include display($justify: center, $align: center);
             h3 {
                 color: $color-white;
+                @media (max-width: 375px) {
+                    font-size: 1rem;
+                }
             }
             @media (max-width: 500px) {
                 width: 325px;
+                margin: 0 auto;
+            }
+            @media (max-width: 375px) {
+                width: 227px;
                 margin: 0 auto;
             }
         }

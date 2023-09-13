@@ -4,7 +4,7 @@ async function displayListCate() {
     const listProduct = document.querySelector(".s-bannerProduct .s_list");
     data.forEach((item) => {
         listProduct.innerHTML += `
-        <div class="col-lg-3 col-md-6 col-sm-6 ">
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
         <a href="listProduct.html?Cate=${item.name}" class="s_item">
             <img src="${item.img}" alt='${item.name}'/>
             <div class="s_overflay">

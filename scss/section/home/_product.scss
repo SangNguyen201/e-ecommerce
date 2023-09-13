@@ -16,6 +16,9 @@
         &.active {
             font-weight: 600;
         }
+        @media (max-width: 375px) {
+            margin: 0 10px;
+        }
     }
     .fix_item {
         @media (max-width: 500px) {
