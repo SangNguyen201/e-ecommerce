@@ -27,7 +27,7 @@ function renderList(data, selector) {
                 <div class="c_discount">${item.discount}<span>%</span></div>
                 </div>
                 <div class="c_infor">
-                <p class="c_name">${item.names}</p>
+                <p class="c_name">${item.names.substring(0, 20)}</p>
                 <p class="c_price"><span>$</span>${item.pirce}</p>
                 </div>
             </a>    

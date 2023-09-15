@@ -916,7 +916,6 @@ footer .c_footerBottom .c_inner .c_payment li {
 .s-shopProduct .s_wrapper .s_listCard .c-product .c_thumb {
   position: relative;
   overflow: hidden;
-  width: 350px;
   margin: 0 auto;
 }
 @media (max-width: 575px) {
