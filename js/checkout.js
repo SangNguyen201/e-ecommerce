@@ -42,7 +42,6 @@ btnCheckOut.addEventListener("click", async (event) => {
         body: JSON.stringify(orderUserObj),
     };
     let res = await fetch(API_ORDERUSER, option);
-    console.log("res: ", res);
     if (res.ok) {
         alert("Save Success");
         localStorage.removeItem("LISTCART");

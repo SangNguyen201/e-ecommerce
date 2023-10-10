@@ -11,29 +11,29 @@ const passwordError = document.getElementById("passwordError");
 const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 btnRegister.addEventListener("click", async (event) => {
     event.preventDefault();
-    if (userName.value.trim() === "") {
-        fullnameError.innerHTML = "Vui lòng nhập tên đầy đủ.";
+    if (userName.value.trim().toLowerCase() === "") {
+        fullnameError.innerHTML = "Please enter name.";
         event.preventDefault();
     } else {
         fullnameError.innerHTML = "";
     }
 
     if (phone.value.trim() === "") {
-        phoneError.innerHTML = "Vui lòng nhập số điện thoại.";
+        phoneError.innerHTML = "Please enter phone number.";
         event.preventDefault();
     } else {
         phoneError.innerHTML = "";
     }
 
     if (!emailRegex.test(email.value)) {
-        emailError.innerHTML = "Email không hợp lệ.";
+        emailError.innerHTML = "Email invalid.";
         event.preventDefault();
     } else {
         emailError.innerHTML = "";
     }
 
     if (password.value.length < 10) {
-        passwordError.innerHTML = "Mật khẩu phải có ít nhất 10 ký tự.";
+        passwordError.innerHTML = "Password must have at least 10 characters.";
         event.preventDefault();
     } else {
         passwordError.innerHTML = "";

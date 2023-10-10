@@ -14,11 +14,6 @@ window.addEventListener("scroll", () => {
 });
 // scroll nav header end
 // getData from url and db.json
-// async function fetchData(url) {
-//     const data = await fetch(url);
-//     const extractData = await data.json();
-//     return extractData;
-// }
 async function fetchData(url) {
     const loadingDiv = document.getElementById("loading");
     loadingDiv.style.display = "block";

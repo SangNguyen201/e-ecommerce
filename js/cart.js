@@ -28,7 +28,7 @@ displayCart();
 function changeCart(event, type) {
     let total = 0;
     let priceTotal = document.querySelector(".s_subtotalPrice .price");
-    const cartItem = event.target.closest(".cart-item"); //forcus vào mỗi item khi click
+    const cartItem = event.target.closest(".cart-item"); //focus vào mỗi item khi click
     let quanlity = cartItem.querySelector(".quantity .s_number input");
     let priceItem = cartItem.querySelector(".subtotal span");
     let updateSubtotal = cartItem.querySelector(".subtotal").getAttribute("data-price");
